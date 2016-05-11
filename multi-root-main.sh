@@ -20,7 +20,7 @@
 
 ERROR="\e[31m[ERROR]\e[0m:"
 INFO="\e[92m[INFO]:\e[0m:"
-
+#BASE_DIR=(cd $(dirname "$0") && pwd)
 BASE_DIR=$(dirname "$0")
 source ${BASE_DIR}/utils/check_os.sh
 
