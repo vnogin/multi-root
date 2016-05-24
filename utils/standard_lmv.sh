@@ -34,11 +34,11 @@ else
         exit
 fi
 
-mount "${MAPPER}${LV_ROOT_STANDARD}" "${BASE_DIR}/mnt/source_fs"
+mount "${MAPPER}${VG}-${LV_ROOT_STANDARD}" "${BASE_DIR}/mnt/source_fs"
 if [ $? -eq 0 ]; then
-        echo "[INFO]: ${MAPPER}${LV_ROOT_STANDARD} has been mounted to ${BASE_DIR}/mnt/source_fs folder."
+        echo "[INFO]: ${MAPPER}${VG}-${LV_ROOT_STANDARD} has been mounted to ${BASE_DIR}/mnt/source_fs folder."
 else
-        echo "[ERROR]: ${MAPPER}${LV_ROOT_STANDARD} hasn't been mounted to ${BASE_DIR}/mnt/source_fs folder."
+        echo "[ERROR]: ${MAPPER}${VG}-${LV_ROOT_STANDARD} hasn't been mounted to ${BASE_DIR}/mnt/source_fs folder."
 	exit
 fi
 
