@@ -35,7 +35,7 @@ source ${BASE_DIR}/utils/vg_lv_check.sh
 source ${BASE_DIR}/utils/create_backup_lvm.sh
 source ${BASE_DIR}/utils/list_backups.sh
 source ${BASE_DIR}/utils/restore_backup_lvm.sh
-
+source ${BASE_DIR}/utils/standard_lmv.sh
 #----------------------------------------------
 ##################################################
 
@@ -164,6 +164,7 @@ case ${JOB_MODE} in
                 ;;
   standard)
                 echo "[INFO]: Running standard mode"
+		standard_lvm
                 ;;
   deploy)
                 echo "[INFO]: Running deploy mode. Checking local.conf and git link"

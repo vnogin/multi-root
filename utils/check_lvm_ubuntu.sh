@@ -20,7 +20,7 @@
 check_lvm2_ubuntu()
 {
 # LVM2 package is installed check 
-LVM2_PACKAGE_STATE=`dpkg -l | grep ^ii | sed 's_  _\t_g' | cut -f 2 | grep lvm2`
+LVM2_PACKAGE_STATE=`dpkg -l | grep ^ii | sed 's_  _\t_g' | cut -f 2 | grep -v lib | grep lvm2`
 # LVM2 module is loaded check
 LVM2_MODULE_STATE=`lsmod | grep dm_multipath | cut -d' ' -f1 | grep dm_multipath`
 
