@@ -3,17 +3,17 @@ USER_ID - user name
 
 JOB_MODE - possible options: 
 
-  - upgrade  - upgrade standard image to up to date state
+  	- upgrade  - upgrade standard image to up to date state
   
-  - backup  - create backup of file system for the defined user
+  	- backup  - create backup of file system for the defined user
   
-  - list - get list of backups for the defined user
+  	- list - get list of backups for the defined user
   
-  - restore  - restore from the backup
+  	- restore  - restore from the backup
   
-  - standard - restore file system to standard file system
+  	- standard - restore file system to standard file system
 
-  - deploy - deploy stack from scratch according to provided info  
+	- deploy - deploy stack from scratch according to provided info  
 
 Block_Dev_Prov - Which block device provider should be used. 
 
@@ -33,17 +33,17 @@ MAPPER - Device mapper path
 
 Mandatory Parameters for LVM:
 
- - VG - LVM Volume group name
+ 	- VG - LVM Volume group name
 
- - LV_ROOT_STANDARD - LVM Logical standard volume name
+ 	- LV_ROOT_STANDARD - LVM Logical standard volume name
 
- - LV_ROOT_FIRST - LVM Logical first root volume name
+ 	- LV_ROOT_FIRST - LVM Logical first root volume name
 
- - LV_ROOT_SECOND - LVM Logical second root volume name
+ 	- LV_ROOT_SECOND - LVM Logical second root volume name
 
- - LV_OPT - LVM Logical opt volume name
+ 	- LV_OPT - LVM Logical opt volume name
 
- - LV_PARTITIONS_LIST - LVM Logical partitions list (root_standard root_one root_two opt_vol)
+ 	- LV_PARTITIONS_LIST - LVM Logical partitions list (root_standard root_one root_two opt_vol)
 
 #-------------Optional values:------------
 
