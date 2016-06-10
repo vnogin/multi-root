@@ -54,17 +54,19 @@ config_error()
 }
 
 
-let AMOUNT_INPUT_PARAMS=$#
+#let AMOUNT_INPUT_PARAMS=$#
 
-if [ "${AMOUNT_INPUT_PARAMS}" -lt 2 ]
-then
-  usage
-fi
+#if [ "${AMOUNT_INPUT_PARAMS}" -lt 2 ]
+#then
+#  usage
+#fi
 
-if [ "${AMOUNT_INPUT_PARAMS}" -gt 3 ]
-then
-  usage
-fi
+#if [ "${AMOUNT_INPUT_PARAMS}" -gt 3 ]
+#then
+#  usage
+#fi
+
+CONFIG_FILE="default.cfg"
 
 while [ "$1" != "" ]; do
     case $1 in
