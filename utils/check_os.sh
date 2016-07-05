@@ -28,6 +28,10 @@ case ${OS_TYPE} in
 		echo "[INFO]: ${OS_TYPE} is supported OS."
 		return 1
 		;;
+  "Ubuntu 16.04 LTS")
+                echo "[INFO]: ${OS_TYPE} is supported OS."
+                return 1
+                ;;
   "CentOS Linux 7 (Core)")
                 echo "[INFO]: ${OS_TYPE} is supported OS."
 		return 2
