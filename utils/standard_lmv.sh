@@ -1,5 +1,7 @@
 standard_lvm()
 {
+source ${BASE_DIR}/utils/change_boot.sh
+
 LV_POSITIONAL_ROOTS="${VG}-${LV_ROOT_FIRST} ${VG}-${LV_ROOT_SECOND}"
 LV_CURRENT_ROOT=`mount| egrep "${VG}-${LV_ROOT_STANDARD}|${VG}-${LV_ROOT_FIRST}|${VG}-${LV_ROOT_SECOND}"|grep remount-ro|awk 'BEGIN{FS="/"}{print $4}'|awk '{print $1}'`
 
@@ -66,22 +68,8 @@ else
         exit
 fi
 
-
-sed -i "s/${LV_CURRENT_ROOT_UUID}/${LV_FUTURE_ROOT_UUID}/g" /boot/grub/grub.cfg
-if [ $? -eq 0 ]; then
-        echo "[INFO]: UUID info in /boot/grub/grub.cfg file has been changed."
-else
-        echo "[ERROR]: UUID info in /boot/grub/grub.cfg file hasn't been changed."
-        exit
-fi
-
-sed -i "s/${LV_CURRENT_ROOT}/${LV_FUTURE_ROOT}/g" /boot/grub/grub.cfg
-if [ $? -eq 0 ]; then
-        echo "[INFO]: Information regarding ${LV_FUTURE_ROOT} has been added in /boot/grub/grub.cfg file."
-else
-        echo "[ERROR]: Information regarding ${LV_FUTURE_ROOT} hasn't been added in /boot/grub/grub.cfg file."
-        exit
-fi
+# Changing boot options
+change_boot
 
 umount "${BASE_DIR}/mnt/destination_fs"
 if [ $? -eq 0 ]; then
