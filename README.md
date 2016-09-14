@@ -1,4 +1,8 @@
-![alt tag](https://2.bp.blogspot.com/-64KpeHbF9yc/V86JDtt726I/AAAAAAAAAEE/w5uz5mOoiacd7YUFKf2VFakZMw_wEmawQCLcB/s1600/Untitled%2BDiagram%2B%25281%2529.png)
+In our team, we are mostly doing different researches in OpenStack area, so we use bare-metal machines very extensively. To make our lives somewhat easier we've developed set of simple scripts that allow us to backup and restore current state of the file system on the server, it also allows to switch between different backups very easily.
+
+This is how we manage disk partitions and how we use software raid on our machines:
+
+![alt tag](https://3.bp.blogspot.com/-z3_lk_Yy3S8/V9aNgBb9KCI/AAAAAAAAAE8/0n3jkH1n1f4EOqFR-4yNQbbFON8rt8XFQCLcB/s1600/multiroot.png)
 
 # ------------Mandatory values:-----------
 USER_ID - user name
@@ -55,5 +59,5 @@ Mandatory Parameters for LVM:
 
  BACKUP_ID 		 - which backup ID should be used for recovering. If not defined will be used latest 
 
-----------------End----------------------
+#----------------End----------------------
 
